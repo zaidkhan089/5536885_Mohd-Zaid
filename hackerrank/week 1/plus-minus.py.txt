@@ -1,0 +1,35 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'plusMinus' function below.
+#
+# The function accepts INTEGER_ARRAY arr as parameter.
+#
+
+def plusMinus(arr):
+    count1 = count2 = count3 = 0
+
+    for i in arr:
+        if i > 0:
+            count1 += 1
+        elif i < 0:
+            count2 += 1
+        else:
+            count3 += 1
+
+    size = len(arr)
+    print(f"{count1/size:.6f}")
+    print(f"{count2/size:.6f}")
+    print(f"{count3/size:.6f}")
+
+if __name__ == '__main__':
+    n = int(input().strip())
+    arr = list(map(int, input().rstrip().split()))
+    plusMinus(arr)
+
